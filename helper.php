@@ -12,6 +12,13 @@ class ContactFormValidator
 	protected $data = array();
 
 	/**
+	 * Labels for fields.
+	 *
+	 * @var array
+	 */
+	protected $labels = array();
+
+	/**
 	 * The validation errors.
 	 *
 	 * @var array
@@ -22,10 +29,12 @@ class ContactFormValidator
 	 * Create new instance of ContactFormValidator.
 	 *
 	 * @param array $data
+	 * @param array $labels
 	 */
-	public function __construct(array $data)
+	public function __construct(array $data, array $labels)
 	{
 		$this->data = $data;
+		$this->labels = $labels;
 	}
 
 	/**
@@ -57,18 +66,52 @@ class ContactFormValidator
 	protected function validate()
 	{
 		if ( ! $this->data['name']) {
-			$this->errors['name'] = 'Name is required.';
+			$this->errors['name'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
 		}
 
 		if ( ! $this->data['email']) {
-			$this->errors['email'] = 'Email is required.';
+
+			$this->errors['email'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
 		} elseif ( ! filter_var($this->data['email'], FILTER_VALIDATE_EMAIL)) {
-			$this->errors['email'] = 'Email is incorrect';
+			$this->errors['email'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_EMAIL');
 		}
 
 		if ( ! $this->data['message']) {
-			$this->errors['message'] = 'Message is required.';
+			$this->errors['message'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
 		}
+	}
+
+	/**
+	 * Return validation errors.
+	 *
+	 * @return array
+	 */
+	public function errors()
+	{
+		return $this->errors;
+	}
+
+	/**
+	 * Determine whether there is validation error
+	 * for given field name.
+	 *
+	 * @param string $fieldName
+	 * @return bool
+	 */
+	public function hasError($fieldName)
+	{
+		return isset($this->errors[$fieldName]);
+	}
+
+	/**
+	 * Return error for given field name.
+	 *
+	 * @param string $fieldName
+	 * @return string
+	 */
+	public function error($fieldName)
+	{
+		return $this->errors[$fieldName];
 	}
 }
 
@@ -122,7 +165,17 @@ class Mailer
 	 */
 	private function prepareMessageBody()
 	{
-		return $this->params['message_template'];
+		$phrases = array('name', 'email', 'phone', 'message');
+
+		$placeholders = array_map(function($item) {
+			return sprintf("{%s}", $item);
+		}, $phrases);
+
+		$replacements = array_map(function($item) {
+			return $this->data[$item];
+		}, $phrases);
+
+		return str_replace($placeholders, $replacements, $this->params['message_template']);
 	}
 
 	/**
