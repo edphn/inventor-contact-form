@@ -33,6 +33,6 @@ defined('_JEXEC') or die; ?>
 		<?php endif; ?>
 	</div>
 	<div class="form-group">
-		<button type="submit" class="btn btn-default btn-blue"><?php echo $labels['submit']; ?></button>
+		<button type="submit" class="btn btn-default"><?php echo $labels['submit']; ?></button>
 	</div>
 </form>
