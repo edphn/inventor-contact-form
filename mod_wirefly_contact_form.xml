@@ -56,7 +56,8 @@
 					default="MOD_WIREFLY_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_VALUE"
 					label="MOD_WIREFLY_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_LABEL"
 					description="MOD_WIREFLY_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_DESCRIPTION"
-					translate_default="true">
+					translate_default="true"
+					filter="safehtml">
 				</field>
 				<field
 					name="name"
