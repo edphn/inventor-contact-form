@@ -185,7 +185,7 @@ class Mailer
 	 */
 	private function prepareHeaders()
 	{
-		$headers = '';
+		$headers = 'Content-type: text/html; charset=utf-8';
 
 		if ($this->params['cc']) {
 			$headers .= sprintf("Cc: %s\r\n", $this->params['cc']);
