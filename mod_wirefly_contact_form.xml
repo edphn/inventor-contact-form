@@ -110,6 +110,17 @@
 					description="MOD_WIREFLY_CONTACT_FORM_FIELD_SUBMIT_BUTTON_DESCRIPTION"
 					translate_default="true">
 				</field>
+				<field
+					name="labels_placement"
+					type="list"
+					default="placeholder"
+					label="MOD_WIREFLY_CONTACT_FORM_FIELD_LABELS_PLACEMENT_LABEL"
+					description="MOD_WIREFLY_CONTACT_FORM_FIELD_LABELS_PLACEMENT_DESCRIPTION"
+					filter="string"
+					translate_default="true">
+					<option value="placeholder">MOD_WIREFLY_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_PLACEHOLDER</option>
+					<option value="above_input">MOD_WIREFLY_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_ABOVE_INPUT</option>
+				</field>
 			</fieldset>
 			<fieldset
 				name="advanced">

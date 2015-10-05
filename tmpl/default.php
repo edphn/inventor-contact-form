@@ -8,31 +8,39 @@ defined('_JEXEC') or die; ?>
 	</div>
 <?php endif; ?>
 
-<form action="<?php echo $action ?>" method="post">
-	<div class="form-group <?php echo isset($validator) && $validator->hasError('name') ? 'has-error' : ''; ?>">
-		<input type="text" name="name" class="form-control" placeholder="<?php echo $labels['name']; ?>" value="<?php echo $name; ?>">
-		<?php if (isset($validator) && $validator->hasError('name')) : ?>
-			<span class="help-block"><?php echo $validator->error('name'); ?></span>
-		<?php endif; ?>
-	</div>
-	<div class="form-group <?php echo isset($validator) && $validator->hasError('email') ? 'has-error' : ''; ?>">
-		<input type="text" name="email" class="form-control" placeholder="<?php echo $labels['email']; ?>" value="<?php echo $email; ?>">
-		<?php if (isset($validator) && $validator->hasError('email')) : ?>
-			<span class="help-block"><?php echo $validator->error('email'); ?></span>
-		<?php endif; ?>
-	</div>
-	<?php if ($isPhoneFieldActive) : ?>
-		<div class="form-group">
-			<input type="text" name="phone" class="form-control" placeholder="<?php echo $labels['phone']; ?>" value="<?php echo $phone; ?>">
-		</div>
+<?php
+	$form = new FormBuilder();
+	$labelsAboveInput = $labelsPlacement === 'above_input';
+?>
+<?php $form->open($action); ?>
+<div class="form-group <?php echo isset($validator) && $validator->hasError('name') ? 'has-error' : ''; ?>">
+	<?php echo ($labelsAboveInput) ? $form->label($labels['name'], ['for' => 'name']) : ''; ?>
+	<?php echo $form->text('name', $name, ['id' => 'name', 'class' => 'form-control', 'placeholder' => ( ! $labelsAboveInput) ? $labels['name'] : '']); ?>
+	<?php if (isset($validator) && $validator->hasError('name')) : ?>
+		<span class="help-block"><?php echo $validator->error('name'); ?></span>
 	<?php endif; ?>
-	<div class="form-group <?php echo isset($validator) && $validator->hasError('message') ? 'has-error' : ''; ?>">
-		<textarea name="message" class="form-control" placeholder="<?php echo $labels['message']; ?>"><?php echo $message; ?></textarea>
-		<?php if (isset($validator) && $validator->hasError('message')) : ?>
-			<span class="help-block"><?php echo $validator->error('message'); ?></span>
-		<?php endif; ?>
-	</div>
+</div>
+<div class="form-group <?php echo isset($validator) && $validator->hasError('email') ? 'has-error' : ''; ?>">
+	<?php echo ($labelsAboveInput) ? $form->label($labels['email'], ['for' => 'email']) : ''; ?>
+	<?php echo $form->text('email', $email, ['id' => 'email', 'class' => 'form-control', 'placeholder' => ( ! $labelsAboveInput) ? $labels['email'] : '']); ?>
+	<?php if (isset($validator) && $validator->hasError('email')) : ?>
+		<span class="help-block"><?php echo $validator->error('email'); ?></span>
+	<?php endif; ?>
+</div>
+<?php if ($isPhoneFieldActive) : ?>
 	<div class="form-group">
-		<button type="submit" class="btn btn-default"><?php echo $labels['submit']; ?></button>
+		<?php echo ($labelsAboveInput) ? $form->label($labels['phone'], ['for' => 'phone']) : ''; ?>
+		<?php echo $form->text('phone', $phone, ['id' => 'phone', 'class' => 'form-control', 'placeholder' => ( ! $labelsAboveInput) ? $labels['phone'] : '']); ?>
 	</div>
+<?php endif; ?>
+<div class="form-group <?php echo isset($validator) && $validator->hasError('message') ? 'has-error' : ''; ?>">
+	<?php echo ($labelsAboveInput) ? $form->label($labels['message'], ['for' => 'message']) : ''; ?>
+	<?php echo $form->textarea('message', $phone, ['id' => 'message', 'class' => 'form-control', 'placeholder' => ( ! $labelsAboveInput) ? $labels['message'] : '']); ?>
+	<?php if (isset($validator) && $validator->hasError('message')) : ?>
+		<span class="help-block"><?php echo $validator->error('message'); ?></span>
+	<?php endif; ?>
+</div>
+<div class="form-group">
+	<?php echo $form->button($labels['submit'], ['class' => 'btn btn-default']); ?>
+</div>
 </form>
