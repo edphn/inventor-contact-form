@@ -35,4 +35,4 @@ $isPhoneFieldActive = $params->get('is_phone_field_active');
 $labelsPlacement = $params->get('labels_placement');
 $action = $app->input->server->get('REQUEST_URI', '', 'string');
 
-require JModuleHelper::getLayoutPath('mod_wirefly_contact_form', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_harmac_contact_form', $params->get('layout', 'default'));
