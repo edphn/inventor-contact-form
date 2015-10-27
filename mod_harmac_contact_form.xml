@@ -1,164 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1" client="site" method="upgrade">
-	<name>Harmac Contact Form</name>
-	<author>edphn</author>
-	<creationDate>19.05.2015</creationDate>
-	<copyright>Copyright (c) 2015 edphn</copyright>
-	<license>Licensed MIT</license>
-	<authorUrl>https://github.com/edphn/harmac-contact-form</authorUrl>
-	<version>1.0.0</version>
-	<description>MOD_HARMAC_CONTACT_FORM_XML_DESCRIPTION</description>
-	<files>
-		<filename module="mod_harmac_contact_form">mod_harmac_contact_form.php</filename>
-		<folder>tmpl</folder>
-		<folder>language</folder>
-		<filename>helper.php</filename>
-	</files>
-	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.mod_harmac_contact_form.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.mod_harmac_contact_form.sys.ini</language>
-		<language tag="pl-PL">language/pl-PL/pl-PL.mod_harmac_contact_form.ini</language>
-		<language tag="pl-PL">language/pl-PL/pl-PL.mod_harmac_contact_form.sys.ini</language>
-	</languages>
-	<config>
-		<fields name="params">
-			<fieldset name="basic">
-				<field
-					name="to"
-					type="text"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_TO_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_TO_DESCRIPTION"
-					required="required">
-				</field>
-				<field
-					name="cc"
-					type="text"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_CC_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_CC_DESCRIPTION">
-				</field>
-				<field
-					name="bcc"
-					type="text"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_BCC_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_BCC_DESCRIPTION">
-				</field>
-				<field
-					name="subject"
-					type="text"
-					default="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_VALUE"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_DESCRIPTION"
-					translate_default="true">
-				</field>
-				<field
-					name="message_template"
-					type="editor"
-					default="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_VALUE"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_DESCRIPTION"
-					translate_default="true"
-					filter="safehtml">
-				</field>
-				<field
-					name="name"
-					type="text"
-					default="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_VALUE"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_DESCRIPTION"
-					translate_default="true">
-				</field>
-				<field
-					name="email"
-					type="text"
-					default="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_VALUE"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_DESCRIPTION"
-					translate_default="true">
-				</field>
-				<field
-					name="phone"
-					type="text"
-					default="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_VALUE"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_DESCRIPTION"
-					translate_default="true">
-				</field>
-				<field
-					name="is_phone_field_active"
-					type="radio"
-					default="0"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_DESCRIPTION"
-					class="btn-group btn-group-yesno"
-					filter="integer">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field
-					name="message"
-					type="text"
-					default="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_VALUE"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_DESCRIPTION"
-					translate_default="true">
-				</field>
-				<field
-					name="submit"
-					type="text"
-					default="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_VALUE"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_DESCRIPTION"
-					translate_default="true">
-				</field>
-				<field
-					name="labels_placement"
-					type="list"
-					default="placeholder"
-					label="MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_LABEL"
-					description="MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_DESCRIPTION"
-					filter="string"
-					translate_default="true">
-					<option value="placeholder">MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_PLACEHOLDER</option>
-					<option value="above_input">MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_ABOVE_INPUT</option>
-				</field>
-			</fieldset>
-			<fieldset
-				name="advanced">
-				<field
-					name="layout"
-					type="modulelayout"
-					label="JFIELD_ALT_LAYOUT_LABEL"
-					description="JFIELD_ALT_MODULE_LAYOUT_DESC">
-				</field>
-				<field
-					name="moduleclass_sfx"
-					type="textarea" rows="3"
-					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC">
-				</field>
-				<field
-					name="cache"
-					type="list"
-					default="1"
-					label="COM_MODULES_FIELD_CACHING_LABEL"
-					description="COM_MODULES_FIELD_CACHING_DESC">
-					<option value="1">JGLOBAL_USE_GLOBAL</option>
-					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-				</field>
-				<field
-					name="cache_time"
-					type="text"
-					default="900"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					description="COM_MODULES_FIELD_CACHE_TIME_DESC">
-				</field>
-				<field
-					name="cachemode"
-					type="hidden"
-					default="static">
-					<option value="static"></option>
-				</field>
-			</fieldset>
-		</fields>
-	</config>
+    <name>Harmac Contact Form</name>
+    <author>edphn</author>
+    <creationDate>19.05.2015</creationDate>
+    <copyright>Copyright (c) 2015 edphn</copyright>
+    <license>Licensed MIT</license>
+    <authorUrl>https://github.com/edphn/harmac-contact-form</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_HARMAC_CONTACT_FORM_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_harmac_contact_form">mod_harmac_contact_form.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>helper.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_harmac_contact_form.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_harmac_contact_form.sys.ini</language>
+        <language tag="pl-PL">language/pl-PL/pl-PL.mod_harmac_contact_form.ini</language>
+        <language tag="pl-PL">language/pl-PL/pl-PL.mod_harmac_contact_form.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="to"
+                    type="text"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_TO_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_TO_DESCRIPTION"
+                    required="required">
+                </field>
+                <field
+                    name="cc"
+                    type="text"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_CC_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_CC_DESCRIPTION">
+                </field>
+                <field
+                    name="bcc"
+                    type="text"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_BCC_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_BCC_DESCRIPTION">
+                </field>
+                <field
+                    name="subject"
+                    type="text"
+                    default="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_VALUE"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_DESCRIPTION"
+                    translate_default="true">
+                </field>
+                <field
+                    name="message_template"
+                    type="editor"
+                    default="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_VALUE"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_DESCRIPTION"
+                    translate_default="true"
+                    filter="safehtml">
+                </field>
+                <field
+                    name="name"
+                    type="text"
+                    default="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_VALUE"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_DESCRIPTION"
+                    translate_default="true">
+                </field>
+                <field
+                    name="email"
+                    type="text"
+                    default="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_VALUE"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_DESCRIPTION"
+                    translate_default="true">
+                </field>
+                <field
+                    name="phone"
+                    type="text"
+                    default="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_VALUE"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_DESCRIPTION"
+                    translate_default="true">
+                </field>
+                <field
+                    name="is_phone_field_active"
+                    type="radio"
+                    default="0"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_DESCRIPTION"
+                    class="btn-group btn-group-yesno"
+                    filter="integer">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                    name="message"
+                    type="text"
+                    default="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_VALUE"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_DESCRIPTION"
+                    translate_default="true">
+                </field>
+                <field
+                    name="submit"
+                    type="text"
+                    default="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_VALUE"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_DESCRIPTION"
+                    translate_default="true">
+                </field>
+                <field
+                    name="labels_placement"
+                    type="list"
+                    default="placeholder"
+                    label="MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_LABEL"
+                    description="MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_DESCRIPTION"
+                    filter="string"
+                    translate_default="true">
+                    <option value="placeholder">MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_PLACEHOLDER</option>
+                    <option value="above_input">MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_ABOVE_INPUT</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC">
+                </field>
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC">
+                </field>
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC">
+                </field>
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 </extension>
