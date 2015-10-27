@@ -43,4 +43,4 @@ defined('_JEXEC') or die; ?>
 <div class="form-group">
 	<?php echo $form->button($labels['submit'], ['class' => 'btn btn-default']); ?>
 </div>
-</form>
+<?php $form->close(); ?>
