@@ -12,7 +12,7 @@ defined('_JEXEC') or die; ?>
     $form = new FormBuilder();
     $labelsAboveInput = $labelsPlacement === 'above_input';
 ?>
-<?php $form->open($action); ?>
+<?php echo $form->open($action); ?>
 <div class="form-group <?php echo isset($validator) && $validator->hasError('name') ? 'has-error' : ''; ?>">
     <?php echo ($labelsAboveInput) ? $form->label($labels['name'], ['for' => 'name']) : ''; ?>
     <?php echo $form->text('name', $name, ['id' => 'name', 'class' => 'form-control', 'placeholder' => ( ! $labelsAboveInput) ? $labels['name'] : '']); ?>
@@ -43,4 +43,4 @@ defined('_JEXEC') or die; ?>
 <div class="form-group">
     <?php echo $form->button($labels['submit'], ['class' => 'btn btn-default']); ?>
 </div>
-<?php $form->close(); ?>
+<?php echo $form->close(); ?>
