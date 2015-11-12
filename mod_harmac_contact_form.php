@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $isPhoneFieldActive = $params->get('is_phone_field_active');
 $labelsPlacement = $params->get('labels_placement');
+$additionalModuleClass = htmlspecialchars($params->get('moduleclass_sfx'));
 $action = $app->input->server->get('REQUEST_URI', '', 'string');
 
 require JModuleHelper::getLayoutPath('mod_harmac_contact_form', $params->get('layout', 'default'));
