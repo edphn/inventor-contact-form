@@ -2,8 +2,9 @@
 
 defined('_JEXEC') or die;
 
-// Require helper file.
-require_once __DIR__ . '/helper.php';
+require_once __DIR__ . '/classes/ContactFormValidator.php';
+require_once __DIR__ . '/classes/FormBuilder.php';
+require_once __DIR__ . '/classes/Mailer.php';
 
 $labels = array(
     'name' => $params->get('name'),
