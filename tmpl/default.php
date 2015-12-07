@@ -4,7 +4,7 @@ defined('_JEXEC') or die; ?>
 
 <?php if (isset($validator) && ! $validator->errors()) :?>
     <div class="alert alert-success" role="alert">
-        <?php echo JText::_('MOD_HARMAC_CONTACT_FORM_FRONT_SENDING_SUCCESS'); ?>
+        <?php echo JText::_('MOD_INVENTOR_CONTACT_FORM_FRONT_SENDING_SUCCESS'); ?>
     </div>
 <?php endif; ?>
 

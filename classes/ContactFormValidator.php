@@ -67,18 +67,18 @@ class ContactFormValidator
     protected function validate()
     {
         if ( ! $this->data['name']) {
-            $this->errors['name'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
+            $this->errors['name'] = JText::_('MOD_INVENTOR_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
         }
 
         if ( ! $this->data['email']) {
 
-            $this->errors['email'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
+            $this->errors['email'] = JText::_('MOD_INVENTOR_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
         } elseif ( ! filter_var($this->data['email'], FILTER_VALIDATE_EMAIL)) {
-            $this->errors['email'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_EMAIL');
+            $this->errors['email'] = JText::_('MOD_INVENTOR_CONTACT_FORM_FRONT_VALIDATION_EMAIL');
         }
 
         if ( ! $this->data['message']) {
-            $this->errors['message'] = JText::_('MOD_WIREFLY_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
+            $this->errors['message'] = JText::_('MOD_INVENTOR_CONTACT_FORM_FRONT_VALIDATION_REQUIRED');
         }
     }
 

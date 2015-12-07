@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1" client="site" method="upgrade">
-    <name>Harmac Contact Form</name>
+    <name>Inventor Contact Form</name>
     <author>edphn</author>
     <creationDate>19.05.2015</creationDate>
     <copyright>Copyright (c) 2015 edphn</copyright>
     <license>Licensed MIT</license>
-    <authorUrl>https://github.com/edphn/harmac-contact-form</authorUrl>
+    <authorUrl>https://github.com/edphn/inventor-contact-form</authorUrl>
     <version>1.0.0</version>
-    <description>MOD_HARMAC_CONTACT_FORM_XML_DESCRIPTION</description>
+    <description>MOD_INVENTOR_CONTACT_FORM_XML_DESCRIPTION</description>
     <files>
         <folder>classes</folder>
         <folder>language</folder>
         <folder>tmpl</folder>
-        <filename module="mod_harmac_contact_form">mod_harmac_contact_form.php</filename>
+        <filename module="mod_inventor_contact_form">mod_inventor_contact_form.php</filename>
     </files>
     <languages>
-        <language tag="en-GB">language/en-GB/en-GB.mod_harmac_contact_form.ini</language>
-        <language tag="en-GB">language/en-GB/en-GB.mod_harmac_contact_form.sys.ini</language>
-        <language tag="pl-PL">language/pl-PL/pl-PL.mod_harmac_contact_form.ini</language>
-        <language tag="pl-PL">language/pl-PL/pl-PL.mod_harmac_contact_form.sys.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_inventor_contact_form.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_inventor_contact_form.sys.ini</language>
+        <language tag="pl-PL">language/pl-PL/pl-PL.mod_inventor_contact_form.ini</language>
+        <language tag="pl-PL">language/pl-PL/pl-PL.mod_inventor_contact_form.sys.ini</language>
     </languages>
     <config>
         <fields name="params">
@@ -26,69 +26,69 @@
                 <field
                     name="to"
                     type="text"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_TO_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_TO_DESCRIPTION"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_TO_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_TO_DESCRIPTION"
                     required="required">
                 </field>
                 <field
                     name="cc"
                     type="text"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_CC_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_CC_DESCRIPTION">
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_CC_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_CC_DESCRIPTION">
                 </field>
                 <field
                     name="bcc"
                     type="text"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_BCC_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_BCC_DESCRIPTION">
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_BCC_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_BCC_DESCRIPTION">
                 </field>
                 <field
                     name="subject"
                     type="text"
-                    default="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_VALUE"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_SUBJECT_DESCRIPTION"
+                    default="MOD_INVENTOR_CONTACT_FORM_FIELD_SUBJECT_VALUE"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_SUBJECT_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_SUBJECT_DESCRIPTION"
                     translate_default="true">
                 </field>
                 <field
                     name="message_template"
                     type="editor"
-                    default="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_VALUE"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_DESCRIPTION"
+                    default="MOD_INVENTOR_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_VALUE"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_MESSAGE_TEMPLATE_DESCRIPTION"
                     translate_default="true"
                     filter="safehtml">
                 </field>
                 <field
                     name="name"
                     type="text"
-                    default="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_VALUE"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_NAME_DESCRIPTION"
+                    default="MOD_INVENTOR_CONTACT_FORM_FIELD_NAME_VALUE"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_NAME_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_NAME_DESCRIPTION"
                     translate_default="true">
                 </field>
                 <field
                     name="email"
                     type="text"
-                    default="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_VALUE"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_EMAIL_DESCRIPTION"
+                    default="MOD_INVENTOR_CONTACT_FORM_FIELD_EMAIL_VALUE"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_EMAIL_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_EMAIL_DESCRIPTION"
                     translate_default="true">
                 </field>
                 <field
                     name="phone"
                     type="text"
-                    default="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_VALUE"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_PHONE_DESCRIPTION"
+                    default="MOD_INVENTOR_CONTACT_FORM_FIELD_PHONE_VALUE"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_PHONE_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_PHONE_DESCRIPTION"
                     translate_default="true">
                 </field>
                 <field
                     name="is_phone_field_active"
                     type="radio"
                     default="0"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_DESCRIPTION"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_IS_PHONE_FIELD_ACTIVE_DESCRIPTION"
                     class="btn-group btn-group-yesno"
                     filter="integer">
                     <option value="1">JYES</option>
@@ -97,29 +97,29 @@
                 <field
                     name="message"
                     type="text"
-                    default="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_VALUE"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_MESSAGE_DESCRIPTION"
+                    default="MOD_INVENTOR_CONTACT_FORM_FIELD_MESSAGE_VALUE"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_MESSAGE_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_MESSAGE_DESCRIPTION"
                     translate_default="true">
                 </field>
                 <field
                     name="submit"
                     type="text"
-                    default="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_VALUE"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_SUBMIT_BUTTON_DESCRIPTION"
+                    default="MOD_INVENTOR_CONTACT_FORM_FIELD_SUBMIT_BUTTON_VALUE"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_SUBMIT_BUTTON_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_SUBMIT_BUTTON_DESCRIPTION"
                     translate_default="true">
                 </field>
                 <field
                     name="labels_placement"
                     type="list"
                     default="placeholder"
-                    label="MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_LABEL"
-                    description="MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_DESCRIPTION"
+                    label="MOD_INVENTOR_CONTACT_FORM_FIELD_LABELS_PLACEMENT_LABEL"
+                    description="MOD_INVENTOR_CONTACT_FORM_FIELD_LABELS_PLACEMENT_DESCRIPTION"
                     filter="string"
                     translate_default="true">
-                    <option value="placeholder">MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_PLACEHOLDER</option>
-                    <option value="above_input">MOD_HARMAC_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_ABOVE_INPUT</option>
+                    <option value="placeholder">MOD_INVENTOR_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_PLACEHOLDER</option>
+                    <option value="above_input">MOD_INVENTOR_CONTACT_FORM_FIELD_LABELS_PLACEMENT_VALUE_ABOVE_INPUT</option>
                 </field>
             </fieldset>
             <fieldset

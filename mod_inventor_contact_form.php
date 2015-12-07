@@ -37,4 +37,4 @@ $labelsPlacement = $params->get('labels_placement');
 $additionalModuleClass = htmlspecialchars($params->get('moduleclass_sfx'));
 $action = $app->input->server->get('REQUEST_URI', '', 'string');
 
-require JModuleHelper::getLayoutPath('mod_harmac_contact_form', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_inventor_contact_form', $params->get('layout', 'default'));
