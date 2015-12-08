@@ -1,17 +1,17 @@
 <?php
 
-defined('_JEXEC') or die; ?>
+defined('_JEXEC') or die;
+
+$form = new FormBuilder();
+$labelsAboveInput = $labelsPlacement === 'above_input';
+
+?>
 
 <?php if (isset($validator) && ! $validator->errors()) :?>
     <div class="alert alert-success" role="alert">
         <?php echo JText::_('MOD_INVENTOR_CONTACT_FORM_FRONT_SENDING_SUCCESS'); ?>
     </div>
 <?php endif; ?>
-
-<?php
-    $form = new FormBuilder();
-    $labelsAboveInput = $labelsPlacement === 'above_input';
-?>
 <div class="contact-form <?php echo $additionalModuleClass; ?>">
     <?php echo $form->open($action); ?>
     <div class="form-group <?php echo isset($validator) && $validator->hasError('name') ? 'has-error' : ''; ?>">
