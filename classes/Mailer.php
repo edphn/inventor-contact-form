@@ -66,7 +66,7 @@ class Mailer
     /**
      * Prepare additional headers.
      *
-     * @return string|mixed
+     * @return string
      */
     private function prepareHeaders()
     {
@@ -80,6 +80,6 @@ class Mailer
             $headers .= sprintf('Bcc: %s\r\n', $this->params['bcc']);
         }
 
-        return $headers ?: null;
+        return $headers;
     }
 }
