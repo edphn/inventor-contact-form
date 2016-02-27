@@ -76,6 +76,18 @@ class FormBuilder
     }
 
     /**
+     * Create hidden input field.
+     *
+     * @param string $name
+     * @param string $value
+     * @return string
+     */
+    public function hidden($name, $value)
+    {
+        return $this->input('hidden', $name, $value);
+    }
+
+    /**
      * Create text input field.
      *
      * @param string $name

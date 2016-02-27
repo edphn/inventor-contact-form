@@ -14,6 +14,7 @@ $labelsAboveInput = $labelsPlacement === 'above_input';
 <?php endif; ?>
 <div class="contact-form <?php echo $additionalModuleClass; ?>">
     <?php echo $form->open($action); ?>
+    <?php echo $form->hidden('moduleId', $moduleId); ?>
     <div class="form-group <?php echo isset($validator) && $validator->hasError('name') ? 'has-error' : ''; ?>">
         <?php echo ($labelsAboveInput) ? $form->label($labels['name'], ['for' => 'name']) : ''; ?>
         <?php echo $form->text('name', $name, ['id' => 'name', 'class' => 'form-control', 'placeholder' => ( ! $labelsAboveInput) ? $labels['name'] : '']); ?>

@@ -6,6 +6,8 @@ require_once __DIR__ . '/classes/ContactFormValidator.php';
 require_once __DIR__ . '/classes/FormBuilder.php';
 require_once __DIR__ . '/classes/Mailer.php';
 
+$moduleId = md5($module->id);
+
 $labels = array(
     'name' => $params->get('name'),
     'email' => $params->get('email'),
@@ -21,7 +23,7 @@ $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
 $message = isset($_POST['message']) ? $_POST['message'] : '';
 
 // Handle POST request.
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['moduleId'] === $moduleId) {
 
     $validator = new ContactFormValidator($_POST, $labels);
 
