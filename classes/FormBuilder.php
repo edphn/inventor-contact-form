@@ -116,7 +116,7 @@ class FormBuilder
     }
 
     /**
-     * Create button element
+     * Create button element.
      *
      * @param string $value
      * @param array $options
