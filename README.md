@@ -8,9 +8,9 @@ You can install the module using Joomla! Administration Panel. Just download ZIP
 
 ## Screenshots
 Below you can see screenshots of configuration and the displayed module.
-![Configuration](https://cloud.githubusercontent.com/assets/1911925/17456678/0386bc4a-5be0-11e6-9fb8-aa42b1df6b54.png)
+![Configuration](https://cloud.githubusercontent.com/assets/1911925/17456942/699721b6-5be8-11e6-85e1-81a0ea85482b.png)
 
-![Displayed module](https://cloud.githubusercontent.com/assets/1911925/17456679/0389cb1a-5be0-11e6-902d-c72ba6364828.png)
+![Displayed module](https://cloud.githubusercontent.com/assets/1911925/17456943/6999bbec-5be8-11e6-87bb-7939672665e6.png)
 
 ## Customizing Template
 Template of module can be easily customized using built-in Joomla! overrides mechanism. You can find some information about it in official documentation -  [Module Layout Overrides](https://docs.joomla.org/Understanding_Output_Overrides#Module_Layout_Overrides)
